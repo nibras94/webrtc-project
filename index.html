@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Room</title>
+</head>
+<body>
+    <h1>WebRTC Room Connection</h1>
+    <input id="roomId" type="text" placeholder="Enter room ID">
+    <button id="joinRoom">Join Room</button>
+    <div>
+        <label>
+            <input id="videoOption" type="radio" name="mediaType" value="video" checked> Video
+        </label>
+        <label>
+            <input id="audioOption" type="radio" name="mediaType" value="audio"> Audio
+        </label>
+    </div>
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
